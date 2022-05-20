@@ -1,13 +1,19 @@
 import './App.css';
 import NavBar from './components/NavBar/NavBar'
+import CardList from './components/CardList/CardList';
+
+
 
 function App() {
   return (
     <div className="App">
-      <NavBar />
-      Contenido del app
+      <NavBar/>
+      <div className='general-container'>
+        <CardList title={'Productos Recomendados'}/>
+        <CardList title={'Productos Relacionados'}/>
+      </div>
     </div>
-  );
+  )
 }
 
 export default App;

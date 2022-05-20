@@ -4,6 +4,11 @@ width: 100%;
 border-bottom: 1px solid black;
 }
 
-.boton {
-    flex-grow: 1;
+.img {
+width: 20%;
 }
+
+.icon {
+float:inline-start;
+}
+
