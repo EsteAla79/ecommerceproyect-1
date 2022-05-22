@@ -8,3 +8,13 @@
 
 .card-item span {font-size: 20px;font-weight: 500;margin-top: 10px;margin-bottom: 20px;}
 
+-card-item-container {
+    border-radius: opx !important;
+    box-shadow: none !important;
+    border: 1px solid grey;
+}
+
+.card-item-container > div {
+    padding: 0px;
+}
+
