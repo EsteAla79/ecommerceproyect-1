@@ -3,15 +3,15 @@ import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
-import { ClassNames } from '@emotion/react';
+//import { ClassNames } from '@emotion/react';
 import Stack from '@mui/material/Stack';
-import CartIcon from '../CartWidget/CartWidget';
+import CartWidget from '../CartWidget/CartWidget';
 
 const NavBar = () => {
     return (
       <AppBar position="static">
         <Toolbar>
-            <img className='img' src="./LOGOBL.png" />
+            <img className='img' src="./LOGOBL.png"/>
             <Stack spacing={4} direction="row"></Stack>
             <div>
                 <Button className='nav-btn' color="inherit">Home</Button>
@@ -26,10 +26,7 @@ const NavBar = () => {
                 <Button className='nav-btn' color="inherit">FqA</Button>
             </div>
           <Button color="inherit">Login</Button>
-          <div>
-            <CartIcon/>
-          </div>
-          
+            <CartWidget/>
         </Toolbar>
       </AppBar>
 

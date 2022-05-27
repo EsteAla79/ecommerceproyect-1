@@ -22,16 +22,14 @@ const onAdd = () => {
 
 return (
 
-        <div classname="count-item">
+        <div className="count-item">
             <div>
             <Button onClick={removeCount} disabled={count == 0}>-</Button>
             <p>{count}</p>
             <Button onClick={addCount} disabled={count == 5}>+</Button>
             </div>
             <div>
-                <Button>
                 <Button onClick={onAdd}>Comprar</Button> 
-                </Button>
             </div>
         </div>
       

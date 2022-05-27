@@ -5,10 +5,11 @@ import CardContent from '@mui/material/CardContent';
 import { Button } from '@mui/material';
 import Modal from '../Modal/Modal';
 import ItemCount from '../ItemCount/ItemCount'
-import Count from '../ItemCount/ItemCount'
+//import Count from '../ItemCount/ItemCount'
 
-const CardItem = ({price, title, image}) => {
+const CardItem = ({price, title, image,}) => {
     const [open, setOpen] = useState(false)
+   
 
     const handleClose = () => {
         setOpen(false)
@@ -19,18 +20,17 @@ const CardItem = ({price, title, image}) => {
             <CardContent>
                 <div className="card-item">
                     <div>
-                        <img src={`./${image}`}/>
+                        <img src={`./${image}`} alt={"producto"}/>
                     </div>
                     <p>{title}</p>
                     <span>$ {price}</span>
-                    <Button variant={'outlined'}>Detalle</Button> 
+                    <Button variant={'outlined'} onClick={() => setOpen(true)} >Detalle</Button> 
                 </div>
                 <div>
                     <Button>
                         <ItemCount/>
                     </Button>
                 </div>              
-                    
             </CardContent>
             {open && (
             <Modal handleClose={handleClose} open={open}>
@@ -42,5 +42,7 @@ const CardItem = ({price, title, image}) => {
     )
 
 }
+
+
 
 export default CardItem
