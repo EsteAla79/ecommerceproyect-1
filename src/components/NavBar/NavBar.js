@@ -3,24 +3,25 @@ import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
-//import { ClassNames } from '@emotion/react';
+import { Link } from 'react-router-dom'
 import Stack from '@mui/material/Stack';
 import CartWidget from '../CartWidget/CartWidget';
 
 const NavBar = () => {
-    return (
+    
+  return (
       <AppBar position="static">
         <Toolbar>
             <img className='img' src="./LOGOBL.png"/>
             <Stack spacing={4} direction="row"></Stack>
             <div>
-                <Button className='nav-btn' color="inherit">Home</Button>
+                <Button className='nav-btn' color="inherit"><Link to="/">Home</Link></Button>
             </div>
             <div>
                 <Button className='nav-btn' color="inherit">Products</Button>
             </div>
             <div>
-                <Button className='nav-btn' color="inherit">Contac</Button>
+                <Button className='nav-btn' color="inherit"><Link to="/contact">Contatc</Link></Button>
             </div>
             <div>
                 <Button className='nav-btn' color="inherit">FqA</Button>

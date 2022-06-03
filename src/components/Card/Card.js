@@ -5,7 +5,7 @@ import CardContent from '@mui/material/CardContent';
 import { Button } from '@mui/material';
 import Modal from '../Modal/Modal';
 import ItemCount from '../ItemCount/ItemCount'
-//import Count from '../ItemCount/ItemCount'
+import { Link } from "react-router-dom"
 
 const CardItem = ({price, title, image,}) => {
     const [open, setOpen] = useState(false)
@@ -24,7 +24,9 @@ const CardItem = ({price, title, image,}) => {
                     </div>
                     <p>{title}</p>
                     <span>$ {price}</span>
-                    <Button variant={'outlined'} onClick={() => setOpen(true)} >Detalle</Button> 
+                    <Button variant={'outlined'} onClick={() => setOpen(true)} >
+                        <Link to={'/prodcut/${id}'}>Detalle</Link>
+                        </Button> 
                 </div>
                 <div>
                     <Button>

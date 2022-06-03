@@ -1,43 +1,31 @@
 import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import NavBar from './components/NavBar/NavBar'
 import productos from './utils/productsMock'
-//import CardList from './components/CardList/CardList';
+import CardList from './components/CardList/CardList';
 import { useState, useEffect } from 'react';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+import Contacto from './pages/Contacto';
+import Home from './pages/Home';
+import NotFound from './pages/NotFound'
+import { DetailsTwoTone } from '@mui/icons-material';
+import Detalle from './pages/Detalle';
 
 function App() {
-  const [products, setProducts] = useState([])
-
-  useEffect(() => {
-      getProducts()
-      .then( (response) => {
-          setProducts(response)
-      })
-      .catch( (err) => {
-        console.log("Catch: Fallo la llamada.", err)
-      })
-      .finally( () => {
-      })
-  }, [])
-
-  const getProducts = () => {
-    return new Promise( (resolve, reject) => {
-      setTimeout(() => {
-          resolve(productos)
-        }, 2000)
-      })
-}
-
-
 
   return (
     <div className="App">
+      <BrowserRouter>
       <NavBar/>
-      {/*<div className='general-container'>
-        <CardList title={'Productos Recomendados'} products={productos}/>
-      </div>
-  */}
-      < ItemDetailContainer />
+      <Routes>
+          <Route path='/' element={<Home />}/> 
+          <Route path='/contact' element={<Contacto />}/>
+          <Route path='/product/:id' element={<Detalle />} /> 
+          <Route path='/product/:id' element={<Detalle />} />
+          <Route path='*' element={<h1>404 Pagina no encontrada</h1>}/> 
+      </Routes>
+      </BrowserRouter>
+  
       </div>
   )
 }
