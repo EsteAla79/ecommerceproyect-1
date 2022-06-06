@@ -4,29 +4,39 @@
         title : 'Montchenot 5 años x 750',
         price : 1500,
         image : 'M5.png',
-        category : 'vino joven',
+        category : 'anejado',
         description : '',
         stock : 10,
-        id : 1  
+        id : 4,  
     },
     {
         title : 'Montchenot 10 años x 750',
         price : 2000,
         image : 'M10.png', 
-        category :'vino anejado',
+        category :'anejado',
         description : '',
         stock : 20,
-        id : 2
+        id : 2,
 
     },
     {
         title : 'Montchenot Chenin Blanc x 750',
         price : 1000,
         image : 'MB.png',
-        category : 'vino blanco',
+        category : 'joven',
         description : '',
         stock : 30,
-        id : 3
+        id : 3,
+
+    },
+    {
+        title : 'Montchenot Chenin Blanc x 750',
+        price : 1000,
+        image : 'MB.png',
+        category : 'joven',
+        description : '',
+        stock : 30,
+        id : 3,
 
     },
     ]
@@ -35,7 +45,7 @@
         title : 'Montchenot 5 años x 750',
         price : 1500,
         image : 'M5.png',
-        description : 'Blend de uvas tintas Cab Sauvignon, Malbec y Merlot',
+        description : 'joven',
         stock : 10,
         id : 1  
 

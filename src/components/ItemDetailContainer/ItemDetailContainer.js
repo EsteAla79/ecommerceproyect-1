@@ -1,7 +1,8 @@
 import { useEffect , useState } from "react"
 import ItemDetail from "../ItemDetail/ItemDetail"
-import productos from '../../utils/productsMock'
+import { producto } from '../../utils/productsMock'
 import { useNavigate, useParams } from "react-router-dom"
+import productos from '../../utils/productsMock'
 
 const ItemDetailContainer = () => {
     const {id, category} = useParams()
@@ -11,17 +12,16 @@ const ItemDetailContainer = () => {
     //const getItem = () => {
     //  return new Promise( (resolve, reject) => {
     //        setTimeout(() => {
-    //            resolve(producto)
     //          }, 2000)
     //        })
     //  }
 
     useEffect(() => {
-    //    getItem()
-    //    .then( (res) => {
-    //        console.log("Respuesta GetItem: ", res)
-    //        setProduct(res)
-    //    })
+        //getItem()
+        //.then( (res) => {
+        //    console.log("Respuesta GetItem: ", res)
+        //    setProduct(res)
+        //})
     console.log("productFilter: ", productFilter)
     if(productFilter === undefined){
         navigate('/not found')
