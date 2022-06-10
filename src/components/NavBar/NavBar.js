@@ -1,5 +1,5 @@
 import './NavBar.css'
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
@@ -9,8 +9,11 @@ import Stack from '@mui/material/Stack';
 import CartWidget from '../CartWidget/CartWidget';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
+import { ThemeContext } from '../../Context/ThemeContext';
+
 
 const NavBar = () => {
+  const { darkTheme } = useContext(ThemeContext)
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -18,12 +21,12 @@ const NavBar = () => {
   };
   const handleClose = () => {
     setAnchorEl(null);
-  };   
+  }; 
 
 const categories = ["anejado", "joven"]
 
   return (
-      <AppBar position="static">
+      <AppBar position="static" className={`header-primary ${darkTheme && 'dark-mode'}`}>
         <Toolbar>
             <img className='img' src="./LOGOBL.png"/>
             <Stack spacing={4} direction="row"></Stack>

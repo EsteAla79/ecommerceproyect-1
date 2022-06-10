@@ -6,6 +6,7 @@ import { Grid } from '@mui/material';
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+
   
 const CardList = ({title, products}) => {
     return(
@@ -16,7 +17,6 @@ const CardList = ({title, products}) => {
             spaceBetween={400}
             slidesPerView={2}
             onSlideChange={() => console.log('slide change')}
-            onSwiper={(swiper) => console.log(swiper)}
             modules={[Pagination, Navigation]}
             navigation={true}>
 

@@ -11,24 +11,27 @@ import NotFound from './pages/NotFound'
 import { DetailsTwoTone } from '@mui/icons-material';
 import Detalle from './pages/Detalle';
 import ProductList from './pages/ProductList';
-
+import ThemeProvider from './Context/ThemeContext'
+import { CartProvider} from './Context/CartContext';
+ 
 function App() {
 
   return (
     <div className="App">
-      <BrowserRouter>
-        <NavBar/>
-        <Routes>
-            
-            <Route path='/contact' element={<Contacto />} />
-            <Route path='/products/:category' element={<ProductList />} />
-            <Route path='/product/:id' element={<Detalle />} />
-            <Route path='/' element={<Home />}/> 
-            <Route path='*' element={<h1>404 Pagina no encontrada</h1>}/>
-
-        </Routes>
-      </BrowserRouter>
-  
+      <CartProvider>
+        <ThemeProvider>
+          <BrowserRouter>
+            <NavBar/>
+            <Routes>
+                <Route path='/contact' element={<Contacto />} />
+                <Route path='/products/:category' element={<ProductList />} />
+                <Route path='/product/:id' element={<Detalle />} />
+                <Route path='/' element={<Home />}/> 
+                <Route path='*' element={<h1>404 Pagina no encontrada</h1>}/>
+            </Routes>
+          </BrowserRouter>
+        </ThemeProvider>
+      </CartProvider>
       </div>
   )
 }

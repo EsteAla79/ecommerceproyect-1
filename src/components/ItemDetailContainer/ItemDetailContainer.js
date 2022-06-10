@@ -4,6 +4,7 @@ import { producto } from '../../utils/productsMock'
 import { useNavigate, useParams } from "react-router-dom"
 import productos from '../../utils/productsMock'
 
+
 const ItemDetailContainer = () => {
     const {id, category} = useParams()
     const navigate = useNavigate
@@ -33,10 +34,10 @@ const ItemDetailContainer = () => {
          return product.id === id
     })
 
-      return(
+     return(
         <>
             <div>Contenedor Item</div>
-            <ItemDetail data={product}/>
+          <ItemDetail data={product}/>
         </>
     )
 }
