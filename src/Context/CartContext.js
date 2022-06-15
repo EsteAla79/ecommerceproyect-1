@@ -4,8 +4,12 @@ const CartContext = createContext()
 
 const CartProvider = ({children}) => {
     const [cartListItems, setCartListItems] = useState([])
-    const addProductToCart = (product) => {
-       setCartListItems([product]) 
+
+    const addProductsToCart = (product) => {
+       let isInCart = cartListItems.find(cartItem => cartItem.id === product.id)
+       if(!isInCart) {
+            setCartListItems(cartListItems => [...cartListItems, product])
+        }
     }
     const data = {
         cartListItems,

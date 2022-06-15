@@ -13,6 +13,7 @@ import Detalle from './pages/Detalle';
 import ProductList from './pages/ProductList';
 import ThemeProvider from './Context/ThemeContext'
 import { CartProvider} from './Context/CartContext';
+import Cart from './pages/Cart'
  
 function App() {
 
@@ -24,10 +25,11 @@ function App() {
             <NavBar/>
             <Routes>
                 <Route path='/contact' element={<Contacto />} />
+                <Route path='/cart' element={<Cart />} />
                 <Route path='/products/:category' element={<ProductList />} />
                 <Route path='/product/:id' element={<Detalle />} />
-                <Route path='/' element={<Home />}/> 
-                <Route path='*' element={<h1>404 Pagina no encontrada</h1>}/>
+                <Route path='/' element={<Home />} /> 
+                <Route path='*' element={<h1>404 Pagina no encontrada</h1>} />
             </Routes>
           </BrowserRouter>
         </ThemeProvider>
